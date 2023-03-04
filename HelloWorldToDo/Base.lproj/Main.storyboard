@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hello World Todo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloWorldToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                             <constraint firstItem="EkF-v2-b6p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wBs-iU-YA4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MHf-YC-CXo">
+                    <navigationItem key="navigationItem" title="Hello World Todo" largeTitleDisplayMode="always" id="MHf-YC-CXo">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pic-AM-oaB">
                             <connections>
                                 <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="Xmz-vz-URa"/>
@@ -52,7 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="EkF-v2-b6p" id="JzG-4Z-FXc"/>
+                        <outlet property="tableView" destination="EkF-v2-b6p" id="mkq-QR-Xaf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,9 +64,12 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="emV-PH-cEF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TSV-lB-GIh">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TSV-lB-GIh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemBlueColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -81,6 +84,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

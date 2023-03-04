@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell  = tableView.dequeueReusableCell(withIdentifier: "cell")
             cell?.textLabel?.text = dataItems[indexPath.row]
-        return cell!
+            return cell!
     }
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -34,10 +34,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive))
         alert.addAction(UIAlertAction(title: "Add Items", style: .default, handler: { _ in
             self.dataItems.append(textFields.text!)
+            self.tableView.reloadData()
         }))
+        
         alert.addTextField { (textField) in
             textField.placeholder = "Add Items to list"
-            textFields = textField;
+            textFields = textField
         }
         present(alert, animated: true)
     }
